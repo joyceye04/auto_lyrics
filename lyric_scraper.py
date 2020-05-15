@@ -74,10 +74,10 @@ def scrape_lyrics_by_singer(singer_name, singer_id):
 
 # args = {"singer_id": 1050282, "singer_name": "房东的猫"}
 # args = {"singer_id": 12138269, "singer_name": "毛不易"}
-args = {"singer_id":5781, "singer_name":"薛之谦"}
+# args = {"singer_id": 5781, "singer_name": "薛之谦"}
+# args = {"singer_id": 1039895, "singer_name": "谢春花"}
+# args = {"singer_id": 861777, "singer_name": "华晨宇"}
+args = {"singer_id": 1007170, "singer_name": "陈粒"}
+
 
 scrape_lyrics_by_singer(**args)
-
-
-
-
