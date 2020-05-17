@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Auto Lyrics App</title>
+</head>
+
+<style>
+#header {
+  background-color: lightblue;
+  color: black;
+  padding: 10px;
+  text-align: center;
+}
+#text {
+	background-color: lightgreen;
+	padding: 30px;
+	/*font-size: 30px;*/
+}
+#result {
+	background-color: lightyellow;
+	padding: 40px;
+	font-size: 30px;
+}
+#textbox-result
+{
+    height:400px;
+    width:1000px;
+    font-size:14pt;
+}
+
+/*.highlight {
+  background-color: yellow;
+}*/
+
+#button {
+  /*background-color:; /* Green */*/
+  border: 2px;
+  color: black;
+  padding: 1px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+</style>
+
+<body>
+	
+	<div id='header'>
+		<h2>Auto Lyric Compose: a Tiny App to Inspire Poetic Sparkles</h2>
+	</div>
+		 
+	<div id='text'>
+	<b>Help: first select data source and click to load model, then set up sentences length and click compose</b><br>
+	<br>
+	<!-- True/False: <input type="checkbox" id="true_false"></input>  -->
+	# select data source:
+	<select id="data_source">
+		<option value="men">华语男歌手</option>
+		<option value="women">华语女歌手</option>
+		<option value="minyao">民谣</option>
+	</select>
+	&nbsp;&nbsp;
+	<!-- <br> -->
+	<button id='button' onclick="load()"><p size=8>Load Model</p></button>
+	<br><br>
+	# num of tokens in sentence:  <input id="limit_word_size" type="number"></input>
+	# num of sentences:  <input id="num_of_sentence" type="number"></input>
+	&nbsp;&nbsp;
+	<button id='button' onclick="compose()"><p size=10>Compose</p></button>
+	</div>
+
+	<div id='result'>
+		<textarea id="textbox-result" name="result" cols="40" rows="5"></textarea>
+	</div>
+	
+	<script type="text/javascript" src = "script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+</body>
+</html>
